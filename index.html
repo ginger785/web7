@@ -1,486 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Задание 5</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  </head>
-  <body>
-    <!--Шапка-->
-    <header class="header container-fluid">
-      <div class="row align-items-center justify-content-between">
-        <div class="col-5 col-md-1">
-          <img class="logo img-fluid" src="logo-Photoroom.png" alt="Лого">
-        </div> 
-        <div class="col-7 col-md-3 text-end text-md-start">
-          <div class="header-title text-white fs-3">My page </div>
-        </div>  
-        <!-- Навигация -->
-        <nav class="menu-btns col-12 col-md-8 d-flex flex-column flex-md-row justify-content-md-end">
-          <a class="navcont btn btn-link mb-2 mb-md-0" href="#linkedlist">Список гиперссылок</a>
-          <a class="navcont btn btn-link mb-2 mb-md-0" href="#table">Таблица</a>
-          <a class="navcont btn btn-link mb-2 mb-md-0" href="#form">Форма</a>
-        </nav>
-      </div>  
-    </header>
-    <div class="container">
-      <div class="content container-lg mt-4">
-        <!-- Список гиперссылок -->
-        <a id="linkedlist"></a>
-          <div class="link-list col-12 order-md-1">
-            <ul>
-              <li><a href="http://kubsu.ru">КубГУ абсолютная гиперссылка</a></li>
-                <li>
-                  <a href="https://kubsu.ru">КубГУ гиперссылка с протоколом https</a>
-              </li>
-              <li>
-                <a href="https://kubsu.ru">
-                  <img src="kubanskiy.jpg" width="250" height="250" alt="Логотип КубГУ"
-                /></a>
-              </li>
-              <li>
-                <a href="links.html">Сокращенная ссылка на внутреннюю страницу</a>
-              </li>
-              <li><a href="index.html">Сокращенная ссылка на главную страницу</a></li>
-              <li><a href="#fragment-page">Ссылка на фрагмент текущей страницы</a></li>
-              <li>
-                <a href="index.html?p1=v1&?p2=v2&?p3=v3"
-                  >Ссылка с тремя параметрами в URL</a
-                >
-              </li>
-              <li>
-                <a href="index.html?id=fragment-page">Ссылка с параметром id в URL</a>
-              </li>
-              <li>
-                <a href="relative.html"
-                  >Относительная ссылка на страницу в текущем каталоге</a
-                >
-              </li>
-              <li>
-                <a href="about/about.html"
-                  >Относительная ссылка на страницу в каталоге about</a
-                >
-              </li>
-              <li>
-                <a href="../links.html"
-                  >Ссылка на страницу в каталоге уровня выше текущей</a
-                >
-              </li>
-              <li>
-                <a href="../../practice.html"
-                  >Ссылка на страницу в каталоге двумя уровнями выше текущей</a
-                >
-              </li>
-              <li>
-                <p>
-                  Контекстная ссылка: <br />
-                  Вы можете ознакомиться с
-                  <a href="https://www.kubsu.ru/ru/all_achievments">достижениями</a>
-                  КубГУ.
-                </p>
-              </li>
-              <li>
-                <a href="https://kubsu.ru/index.php#block-system-main"
-                  >Ссылка на фрагмент страницы стороннего сайта</a
-                >
-              </li>
-              <img src="un-1.jpg" width="300" height="200" alt="Здание университета" usemap="#kubsu"/>
-              <li>
-                <map name="kubsu">
-                  <area
-                    shape="rect"
-                    coords="86,148,228,153"
-                    href="https://kubsu.ru/index.php"
-                    alt="Сайт университета"
-                  />
-                  <area
-                    shape="circle"
-                    coords="268,175,18"
-                    href="https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9A%D1%83%D0%B1%D0%93%D0%A3.png#filehistory"
-                    alt="История логотипа КубГУ"
-                  />
-                </map>
-              </li>
-              <li><a href="">Ссылка с пустым href</a></li>
-              <li><a>Ссылка без href</a></li>
-              <li>
-                <a href="https://kubsu.ru" rel="nofollow"
-                  >Ссылка, по которой запрещен переход поисковиками</a
-                >
-              </li>
-              <li>
-                <a href="https://kubsu.ru" rel="noindex"
-                  >Ссылка, запрещенная для индексации поисковиками</a
-                >
-              </li>
-              <li>
-                <ol>
-                  <li>
-                    <a
-                      href="https://www.kubsu.ru/ru/university/history-tradition"
-                      title="История и традиции КубГУ"
-                      >Познакомьтесь с историями и традициями КубГУ</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                        href="https://www.kubsu.ru/ru/science"
-                        title="Наука и инновации КубГУ"
-                        >Вступайте в научное сообщество КубГУ</a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <a href="ftp://user:pass123@adress.ru/Temp/file.txt"
-                  >ссылка на файл на сервере FTP с авторизацией</a>
-              </li>  
-            </ul>
-          </div>
-          <!-- Таблица -->
-          <a id="table"></a>
-          <div class="table-container col-12" style="overflow-x: auto;">
-            <table class="table table-striped table-responsive mt-4">
-              <thead>
-                <tr>
-                  <th id="1" colspan="2">Машина</th> 
-                  <th id="3">Описание</th>
-                  <th id="4">Цена</th>
-                </tr>
-              </thead>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 7</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="gallery.js"></script>
+</head>
+<body>
+    <div class="calc-container">
+        <h1>Калькулятор стоимости автомобилей</h1>
+        
+        <div class="calc-input-group">
+            <label for="quantity">Количество автомобилей:</label>
+            <input type="number" id="quantity" min="1" value="1">
+        </div>
 
-              <tbody>
-                <tr>
-                  <td>BMW</td>
-                  <td>BMW M8 Competition, BMW M8 Coupe и BMW M850i xDrive Coupe</td>
-                  <td>
-                    Автомобили M BMW 8 серии Coupe доставят Вам максимальное
-                    удовольствие от вождения в атмосфере спортивного стиля и роскоши
-                    как на дорогах, так и на гоночной трассе
-                  </td>
-                  <td>от 12 500 000 руб.</td>
-                </tr>
-                <tr>
-                  <td>Mercedes-Benz</td>
-                  <td>Mercedes-Benz AMG GT 63 S</td>
-                  <td>
-                    Mercedes-Benz AMG — это автомобили, которые воплощают передовые
-                    достижения автомобильной индустрии. Они разрабатываются
-                    специальным подразделением компании в Аффальтербахе и
-                    отличаются: потрясающей динамикой, отточенной управляемостью,
-                    стильным и эффектным внешним видом и интерьером, уникальными
-                    опциями комфорта.
-                  </td>
-                  <td>от 9 900 000 руб.</td>
-                </tr>
-                <tr>
-                  <td>Nissan</td>
-                  <td>Nissan GT-R</td>
-                  <td>
-                    Nissan GT-R — автомобиль, выпускаемый японской маркой Nissan с
-                    2007 года. Он имеет компоновку сидений 2 + 2 и считается
-                    одновременно спортивным автомобилем и Grand tourer.Автомобиль
-                    построен на платформе PM и оснащён инновационными концепциями и
-                    технологиями, такими как улучшенная аэродинамика, двигатель
-                    VR38DETT, активная подвеска и система полного привода ATTESA
-                    E-TS Pro.
-                  </td>
-                  <td>от 7 000 000 руб.</td>
-                </tr>
-                <tr>
-                  <td>Porsche</td>
-                  <td>Porsche 911 GT3 RS</td>
-                  <td>
-                    Porsche 911 GT3 RS — это двухместное спортивное купе
-                    премиум-класса. Технические характеристики: оппозитная
-                    атмосферная бензиновая шестерка объёмом 3996 кубических
-                    сантиметров; мощность — 520 лошадиных сил при 8250 об/мин и 470
-                    Нм крутящего момента при 6000 оборотах коленчатого вала в
-                    минуту; семиступенчатая преселективная роботизированная коробка
-                    передач с двумя сцеплениями;максимальная скорость — 312
-                    километров в час.
-                  </td>
-                  <td>35 000 000 руб.</td>
-                </tr>
-                <tr>
-                  <td>Ferrari</td>
-                  <td>Ferrari F8 Tributo</td>
-                  <td>
-                    Ferrari F8 Tributo — это двухместное купе, которое было
-                    представлено на международном автосалоне в Женеве 5 марта 2019
-                    года. Основные характеристики: 720-сильный бензиновый двигатель
-                    V8 turbo — самый мощный мотор V8 в истории Ferrari;
-                    исключительная управляемость благодаря применению передовых
-                    решений в области аэродинамики; система контроля управляемости
-                    Side Slip Angle Control новейшей версии 6.1; система Ferrari
-                    Dynamic Enhancer (FDE+), которая индивидуально регулирует
-                    давление в тормозных механизмах.
-                  </td>
-                  <td>от 30 000 000 руб</td>
-                </tr>
-                <tr>
-                  <td>Pagani</td>
-                  <td>Pagani Zonda</td>
-                  <td>
-                    Pagani Zonda — среднемоторный спортивный автомобиль итальянского
-                    производителя спортивных автомобилей Pagani. Были выпущены как
-                    2-дверные купе, так и родстер, а также третий новый вариант —
-                    barchetta. Конструкция в основном выполнена из углеродного
-                    волокна.
-                  </td>
-                  <td>от 171 000 000 руб.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div> 
+        <div class="calc-input-group">
+            <label>Выберите автомобиль:</label>
+            <select id="productType">
+                <option value="12500000" data-options="none" data-property="none">BMW M8 Competition (12 500 000 руб.)</option>
+                <option value="9900000" data-options="options" data-property="none">Mercedes-Benz AMG GT 63 S (9 900 000 руб.)</option>
+                <option value="35000000" data-options="none" data-property="property">Porsche 911 GT3 RS (35 000 000 руб.)</option>
+                <option value="30000000" data-options="options" data-property="property">Ferrari F8 Tributo (30 000 000 руб.)</option>
+            </select>
+        </div>
 
-        <div class="calc p-3">
-          <h1>Калькулятор стоимости заказа</h1>
-          <label for="quantity">Количество:</label>
-          <input type="number" class="p-1 mb-3" id="quantity" min="1" value="1">
-          <label>Автомобиль:</label>
-          <div style="display: flex;">
-              <input type="radio" id="service1" name="service" value="12500000" checked>
-              <label for="service1">BMW M8 Competition (12 500 000 руб.)</label>
-          </div>
-          <div style="display: flex;">
-              <input type="radio" id="service2" name="service" value="9900000">
-              <label for="service2">Mercedes-Benz AMG GT 63 S (9 900 000 руб.)</label>
-          </div>
-          <div style="display: flex;">
-              <input type="radio" id="service3" name="service" value="35000000">
-              <label for="service3">Porsche 911 GT3 RS (35 000 000 руб.)</label>
-          </div>
-          <div style="display: flex;">
-              <input type="radio" id="service4" name="service" value="30000000">
-              <label for="service4">Ferrari F8 Tributo (30 000 000 руб.)</label>
-          </div>
-          <div style="display: flex;">
-              <input type="radio" id="service5" name="service" value="7000000">
-              <label for="service5">Nissan GT-R (7 000 000 руб.)</label>
-          </div>
-          <div style="display: flex;">
-              <input type="radio" id="service6" name="service" value="171000000">
-              <label for="service6">Pagani Zonda (171 000 000 руб.)</label>
-          </div><br>
-          <label for="option">Комплектация:</label>
-          <select id="option">
-              <option value="0">Без комплектации</option>
-              <option value="1000000">Competition (+1000000 руб.)</option>
-              <option value="500000">Comfort(+500000 руб.)</option>
-          </select><br>
-          <label for="property">Страховка:</label>
-          <div style="display: flex;">
-              <input type="checkbox" id="property" value="100000">
-              <label for="property">Каско (+100000 руб.)</label>
-          </div><br>
-          <div id="result" class="mt-1"></div>
-      </div><br>
-      <div class="gallery-container">
-        <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
-        <div class="gallery">
-            <div class="slides">
-                <div class="slide">
-                    <img src="BMW.png" alt="Image 1">
-                </div>
-                <div class="slide">
-                    <img src="Dodge.webp" alt="Image 2">
-                </div>
-                <div class="slide">
-                    <img src="Ferrari.png" alt="Image 3">
-                </div>
-                <div class="slide">
-                    <img src="mazda.jpg" alt="Image 4">
-                </div>
-                <div class="slide">
-                    <img src="Merc.png" alt="Image 5">
-                </div>
-                <div class="slide">
-                    <img src="Nissan.png" alt="Image 6">
-                </div>
-                <div class="slide">
-                    <img src="Pagani.png" alt="Image 7">
-                </div>
-                <div class="slide">
-                    <img src="Porche.png" alt="Image 8">
-                </div>
+        <div class="calc-input-group" id="optionsGroup" style="display: none;">
+            <label>Выберите опцию:</label>
+            <div class="form-check">
+                <input type="radio" id="option1" name="option" class="form-check-input" value="0" checked>
+                <label for="option1" class="form-check-label">Без опции</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="option2" name="option" class="form-check-input" value="1000000">
+                <label for="option2" class="form-check-label">Luxury (+1 000 000 руб.)</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="option3" name="option" class="form-check-input" value="500000">
+                <label for="option3" class="form-check-label">Комфорт (+500 000 руб.)</label>
             </div>
         </div>
-        <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-    
-    <div class="pager">
-        <span id="current-page">1</span> / <span id="total-pages">5</span>
-    </div><br>
 
-        <h2 class="py-1 rounded-pill m-3 mt-5 col-5 text-center">Зарегистрируйтесь на нашем сайте</h2>
-        <!-- Форма -->
-        <a id="form" class="mt-4"></a>
-        <form action="test@example.com" class="needs-validation container col-md-12" novalidate>
-          <div class="mb-3">
-            <label for="name" class="form-label">ФИО:</label>
-            <input type="text" id="name" class="form-control" required>
+        <div class="calc-input-group" id="propertyGroup" style="display: none;">
+            <input type="checkbox" id="property" value="100000">
+            <label for="property">КАСКО (+100 000 руб.)</label>
+        </div>
+
+        <div id="result" class="mt-3"></div>
+    </div>
+
+    <div class="gallery-container">
+      <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="gallery">
+          <div class="slides">
+              <div class="slide">
+                  <img src="BMW.png" alt="Image 1">
+              </div>
+              <div class="slide">
+                  <img src="Dodge.webp" alt="Image 2">
+              </div>
+              <div class="slide">
+                  <img src="Ferrari.png" alt="Image 3">
+              </div>
+              <div class="slide">
+                  <img src="mazda.jpg" alt="Image 4">
+              </div>
+              <div class="slide">
+                  <img src="Merc.png" alt="Image 5">
+              </div>
+              <div class="slide">
+                  <img src="Nissan.png" alt="Image 6">
+              </div>
+              <div class="slide">
+                  <img src="Pagani.png" alt="Image 7">
+              </div>
+              <div class="slide">
+                  <img src="Porche.png" alt="Image 8">
+              </div>
           </div>
-          <div class="mb-3">
-            <label for="phone" class="form-label">Телефон:</label>
-            <input type="tel" id="phone" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">E-mail:</label>
-            <input type="email" id="email" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label for="birthdate" class="form-label">Дата рождения:</label>
-            <input type="date" id="birthdate" class="form-control" required>
-          </div>
-          <fieldset class="mb-3">
-            <legend class="col-form-label">Пол:</legend>
-            <div class="form-check">
-              <input type="radio" name="gender" id="male" class="form-check-input">
-              <label for="male" class="form-check-label">М</label>
-            </div>
-            <div class="form-check">
-              <input type="radio" name="gender" id="female" class="form-check-input">
-              <label for="female" class="form-check-label">Ж</label>
-            </div>
-          </fieldset>
-          <div class="mb-3">
-            <label for="prog-lang" class="form-label">Любимый язык программирования:</label>
-            <select name="prog-lang" id="prog-lang" class="form-select" multiple>
-              <option value="1">JavaScript</option>
-              <option value="2">PHP</option>
-              <option value="3">Python</option>
-              <option value="4">Java</option>
-              <option value="5">Pascal</option>
-              <option value="6">C</option>
-              <option value="7">C++</option>
-              <option value="8">Haskell</option>
-              <option value="9">Clojure</option>
-              <option value="10">Prolog</option>
-              <option value="11">Scala</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="bio" class="form-label">Биография:</label>
-            <textarea name="bio" id="bio" class="form-control"></textarea>
-          </div>
-          <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="contract">
-            <label for="contract" class="form-check-label">С контрактом ознакомлен(-а)</label>
-          </div>
-          <button type="submit" class="btn btn-primary mt-3">Сохранить</button><br><br>
-        </form>
       </div>
-    </div>
+      <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+  
+  <div class="pager">
+      <span id="current-page">1</span> / <span id="total-pages">5</span>
+  </div><br>
 
-    <!--Подвал -->
-    <footer class="footer container-fluid text-start text-white py-3">
-      <p>&copy; Мерзлякова В.В. 27/2</p>
-    </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const quantityInput = document.getElementById('quantity');
+      const productTypeSelect = document.getElementById('productType');
+      const optionsGroup = document.getElementById('optionsGroup');
+      const propertyGroup = document.getElementById('propertyGroup');
+      const propertyCheckbox = document.getElementById('property');
+      const resultDiv = document.getElementById('result');
+      const optionRadios = document.querySelectorAll('input[name="option"]');
+      const slides = document.querySelector('.slides');
+      const totalSlides = document.querySelectorAll('.slide').length;
+      const currentPage = document.getElementById('current-page');
+      const totalPages = document.getElementById('total-pages');
+      let currentSlide = 0;
 
-    <script>
-      const toggleButton = document.getElementById("toggleButton");
-      const hiddenBlock = document.getElementById("hiddenBlock");
+      function updateVisibility() {
+          const selectedType = productTypeSelect.selectedOptions[0];
+          const options = selectedType.getAttribute('data-options');
+          const property = selectedType.getAttribute('data-property');
 
-      toggleButton.addEventListener("click", () => {
-      if (hiddenBlock.style.display === "block") {
-          hiddenBlock.style.display = "none";
-      } else {
-          hiddenBlock.style.display = "block";
+          optionsGroup.style.display = options === "options" ? "block" : "none";
+          propertyGroup.style.display = property === "property" ? "block" : "none";
       }
-      });
-  </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script>
-        const quantityInput = document.getElementById('quantity');
-        const serviceRadios = document.querySelectorAll('input[name="service"]');
-        const optionSelect = document.getElementById('option');
-        const propertyCheckbox = document.getElementById('property');
-        const calculateButton = document.getElementById('calculate');
-        const resultDiv = document.getElementById('result');
-    
-        function calculateCost() {
+
+      function calculateCost() {
           const quantity = parseInt(quantityInput.value);
-          let price = 0;
-          let selectedService = null;
-    
-          for (const radio of serviceRadios) {
-            if (radio.checked) {
-              selectedService = radio;
-              price = parseInt(radio.value);
-              break;
-            }
+          if (quantity <= 0) {
+              resultDiv.textContent = "Количество не может быть отрицательным или равным нулю.";
+              resultDiv.style.color = "red";
+              return;
           }
-    
-        if (selectedService) {
-            if (selectedService.id === 'service4' || selectedService.id === 'service5' || selectedService.id === 'service6') {
-              optionSelect.style.display = 'block';
-              propertyCheckbox.style.display = 'none';
-              if(selectedService.id === 'service4' || selectedService.id === 'service5'){
-                propertyCheckbox.style.display = 'block';
-                if (propertyCheckbox.checked ) {
-                    price += parseInt(propertyCheckbox.value);
-                }   
-                }
-              price += parseInt(optionSelect.value);
-            }
-            else if (selectedService.id === 'service3' || selectedService.id === 'service1' || selectedService.id === 'service2') {
-              propertyCheckbox.style.display = 'none';
-              optionSelect.style.display = 'none';
-              if(selectedService.id === 'service3' || selectedService.id === 'service1'){
-                propertyCheckbox.style.display = 'block';
-                if (propertyCheckbox.checked ) {
-                    price += parseInt(propertyCheckbox.value);
-                }
-              } 
-            }
-            else {
-              optionSelect.style.display = 'none';
-              propertyCheckbox.style.display = 'none';
-            }
+
+          const basePrice = parseInt(productTypeSelect.value);
+          let totalPrice = basePrice * quantity;
+
+          if (optionsGroup.style.display === "block") {
+              optionRadios.forEach(radio => {
+                  if (radio.checked) {
+                      totalPrice += parseInt(radio.value) * quantity;
+                  }
+              });
           }
-          const totalCost = quantity * price;
-          resultDiv.textContent = `Стоимость заказа: ${totalCost} руб.`;
-        }
-        serviceRadios.forEach(radio => {
-          radio.addEventListener('change', calculateCost);
-        });
-        optionSelect.addEventListener('change', calculateCost);
-        propertyCheckbox.addEventListener('change', calculateCost);
-        quantityInput.addEventListener('change', calculateCost);
 
+          if (propertyGroup.style.display === "block" && propertyCheckbox.checked) {
+              totalPrice += parseInt(propertyCheckbox.value) * quantity;
+          }
 
-        let currentSlide = 0; // Индекс текущей страницы
-        const totalSlides = 8; // Общее количество слайдов
-        const slidesToShow = window.innerWidth <= 768 ? 1 : 3; // Установка количества слайдов для показа
-        const totalPages = window.innerWidth <= 768 ? 8 : 6; // Общее количество страниц
+          resultDiv.textContent = `Стоимость заказа: ${totalPrice.toLocaleString()} руб.`;
+          resultDiv.style.color = "black";
+      }
 
-        document.getElementById('total-pages').textContent = totalPages;
+      quantityInput.addEventListener('input', calculateCost);
+      productTypeSelect.addEventListener('change', () => {
+          updateVisibility();
+          calculateCost();
+      });
+      propertyCheckbox.addEventListener('change', calculateCost);
+      optionRadios.forEach(radio => radio.addEventListener('change', calculateCost));
 
-        function updatePager() {
-            document.getElementById('current-page').textContent = currentSlide + 1;
-        }
+      updateVisibility();
+      calculateCost();
+    });
 
-        function moveSlide(direction) {
-            currentSlide += direction;
+    let currentSlide = 0; // Индекс текущей страницы
+    const totalSlides = 8; // Общее количество слайдов
+    const slidesToShow = window.innerWidth <= 768 ? 1 : 3; // Установка количества слайдов для показа
+    const totalPages = window.innerWidth <= 768 ? 8 : 6; // Общее количество страниц
 
-            // Проверка границ текущего индекса страницы
-            if (currentSlide < 0) {
-                currentSlide = 0;
-            } else if (currentSlide >= totalPages) {
-                currentSlide = totalPages - 1;
-            }
+    document.getElementById('total-pages').textContent = totalPages;
 
-            // Вычисляем смещение для слайдов
-            const gallery = document.querySelector('.slides');
-            const offset = window.innerWidth <= 768 ? -currentSlide * (100 / 1) : -currentSlide * (100 / 3);
-            gallery.style.transform = `translateX(${offset}%)`;
-            updatePager();
-        }
-      </script>
-  </body>
+    function updatePager() {
+        document.getElementById('current-page').textContent = currentSlide + 1;
+    }
+
+    function moveSlide(direction) {
+      currentSlide += direction;
+
+      // Проверка границ текущего индекса страницы
+      if (currentSlide < 0) {
+          currentSlide = 0;
+      } else if (currentSlide >= totalPages) {
+          currentSlide = totalPages - 1;
+      }
+
+      // Вычисляем смещение для слайдов
+      const gallery = document.querySelector('.slides');
+      const offset = window.innerWidth <= 768 ? -currentSlide * (100 / 1) : -currentSlide * (100 / 3);
+      gallery.style.transform = `translateX(${offset}%)`;
+      updatePager();
+    }
+  </script>
+</body>
 </html>
